@@ -14,7 +14,14 @@ header {
   background: #2c3e50;
   color: white;
   text-align: center;
+  height: 120px; /* Высота header */
   padding: 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  margin: 2px 0 0 0; /* Отступ сверху для компенсации высоты header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -24,6 +31,11 @@ header h1 {
 nav {
   background: #34495e;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 120px; /* Высота header (примерно 120px) */
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -35,6 +47,10 @@ nav a {
 
 nav a:hover {
   color: #3498db;
+}
+
+main {
+  padding-top: 180px; /* Компенсация высоты header (120px) + nav (60px) */
 }
 
 section {
@@ -155,8 +171,21 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+      padding: 1rem;
+  }
+
   header h1 {
       font-size: 1.8rem;
+  }
+
+  nav {
+      padding: 0.5rem;
+      top: 80px; /* Меньшая высота header на мобильных */
+  }
+
+  main {
+      padding-top: 120px; /* Компенсация для меньшей высоты header + nav */
   }
 
   nav a {

@@ -1,9 +1,14 @@
- // Плавная прокрутка для навигации
- document.querySelectorAll('nav a').forEach(anchor => {
+// Плавная прокрутка для навигации с учетом фиксированных header и nav
+document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({ behavior: 'smooth' });
+        const fixedOffset = 180; // Высота header (120px) + nav (60px)
+        const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: sectionPosition - fixedOffset,
+            behavior: 'smooth'
+        });
     });
 });
 
