@@ -1,77 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё портфолио</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/scripts/script.js" defer></script>
+
 </head>
 <body>
-  <!-- Container for the image gallery -->
-<div class="container">
+    <header>
+        <h1>Моё портфолио</h1>
+        <p>Ваше имя | Ваш профессиональный заголовок</p>
+    </header>
 
-  <!-- Full-width images with number text -->
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-      <img src="image/111.webp" style="width:100%">
-  </div>
+    <nav>
+        <a href="#about">О себе</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#skills">Навыки</a>
+        <a href="#contact">Контакты</a>
+    </nav>
 
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-      <img src="image/22.webp" style="width:100%">
-  </div>
+    <section id="about">
+        <h2>О себе</h2>
+        <p>Привет! Я [Ваше имя], [ваша профессия, например, веб-разработчик, дизайнер]. Я создаю [опишите, что вы делаете, например, современные веб-сайты, красивые дизайны]. Моя цель — [ваша цель, например, помогать бизнесу расти через цифровые решения].</p>
+    </section>
 
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-      <img src="image/33.webp" style="width:100%">
-  </div>
+    <section id="portfolio">
+        <h2>Портфолио</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- Замените изображения и ссылки на свои проекты -->
+                <div class="carousel-item">
+                    <a href="https://example.com/project1" target="_blank">
+                        <img src="https://via.placeholder.com/800x300" alt="Проект 1">
+                        <p>Проект 1</p>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://example.com/project2" target="_blank">
+                        <img src="https://via.placeholder.com/800x300" alt="Проект 2">
+                        <p>Проект 2</p>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://example.com/project3" target="_blank">
+                        <img src="https://via.placeholder.com/800x300" alt="Проект 3">
+                        <p>Проект 3</p>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+    </section>
 
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-      <img src="image/a1.webp" style="width:100%">
-  </div>
+    <section id="skills">
+        <h2>Навыки</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>UI/UX Дизайн</li>
+            <!-- Добавьте свои навыки -->
+        </ul>
+    </section>
 
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-      <img src="image/a4.webp" style="width:100%">
-  </div>
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь со мной:</p>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>Телефон: <a href="tel:+123456789">+123456789</a></p>
+        <p>Социальные сети: <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    </section>
 
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-      <img src="image/a6.webp" style="width:100%">
-  </div>
+    <footer>
+        <p>© 2025 [Ваше имя]. Все права защищены.</p>
+    </footer>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
-
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="image/111.webp" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="image/22.webp" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="image/33.webp" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="image/a1.webp" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="image/a4.webp" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="image/a6.webp" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-    </div>
-  </div>
-</div>
 </body>
 </html>
