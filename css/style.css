@@ -14,14 +14,12 @@ header {
   background: #2c3e50;
   color: white;
   text-align: center;
-  height: 120px; /* Высота header */
   padding: 2rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  margin: 2px 0 0 0; /* Отступ сверху для компенсации высоты header */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 120px;
 }
 
 header h1 {
@@ -33,9 +31,8 @@ nav {
   padding: 1rem;
   position: fixed;
   width: 100%;
-  top: 120px; /* Высота header (примерно 120px) */
+  top: 120px;
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -50,7 +47,7 @@ nav a:hover {
 }
 
 main {
-  padding-top: 180px; /* Компенсация высоты header (120px) + nav (60px) */
+  padding-top: 180px;
 }
 
 section {
@@ -63,7 +60,6 @@ section {
   background: #f4f4f4;
 }
 
-/* Стили для карусели */
 #portfolio .carousel-container {
   position: relative;
   overflow: hidden;
@@ -151,6 +147,49 @@ section {
   border-radius: 5px;
 }
 
+#resume .resume-toggle {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+#resume .resume-toggle:hover {
+  background: #2980b9;
+}
+
+#resume .resume-content {
+  display: none;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#resume .resume-content.show {
+  display: block;
+}
+
+#resume h3, #resume h4 {
+  margin-bottom: 0.5rem;
+}
+
+#resume p, #resume ul {
+  margin-bottom: 1rem;
+}
+
+#resume ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+#resume ul li {
+  margin-bottom: 0.5rem;
+}
+
 #contact a {
   color: #3498db;
   text-decoration: none;
@@ -181,11 +220,11 @@ footer {
 
   nav {
       padding: 0.5rem;
-      top: 80px; /* Меньшая высота header на мобильных */
+      top: 80px;
   }
 
   main {
-      padding-top: 120px; /* Компенсация для меньшей высоты header + nav */
+      padding-top: 120px;
   }
 
   nav a {
@@ -200,5 +239,10 @@ footer {
   #portfolio .card-title {
       font-size: 0.9rem;
       padding: 0.3rem;
+  }
+
+  #resume .resume-toggle {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.8rem;
   }
 }
