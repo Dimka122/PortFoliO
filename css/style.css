@@ -141,10 +141,12 @@ section {
 }
 
 #skills li {
-  background: #3498db;
+  background: #2774a7;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  flex: 1 1 calc(33.333% - 1rem);
+  text-align: center;
 }
 
 #resume .resume-toggle {
