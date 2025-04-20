@@ -14,12 +14,12 @@ header {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 0.5rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  height: 120px;
+  height: 100px;
 }
 
 header h1 {
@@ -31,7 +31,7 @@ nav {
   padding: 1rem;
   position: fixed;
   width: 100%;
-  top: 120px;
+  top: 100px;
   z-index: 999;
 }
 
@@ -57,7 +57,7 @@ section {
 }
 
 #about {
-  background: #f4f4f4;
+  background: #d5e1e6;
 }
 
 #portfolio .carousel-container {
@@ -141,12 +141,13 @@ section {
 }
 
 #skills li {
-  background: #2774a7;
+  background: #3e5fca;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   flex: 1 1 calc(33.333% - 1rem);
   text-align: center;
+  border: #111212 2px solid;
 }
 
 #resume .resume-toggle {
@@ -162,11 +163,12 @@ section {
 
 #resume .resume-toggle:hover {
   background: #2980b9;
+  border:#111212 2px solid ;
 }
 
 #resume .resume-content {
   display: none;
-  background: #f4f4f4;
+  background: #f4f4f497;
   padding: 1rem;
   border-radius: 5px;
 }
