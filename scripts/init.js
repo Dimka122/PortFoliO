@@ -14,7 +14,7 @@ $(document).ready(function() {
         });
         
         $('#test-circle2').circliful({
-            percent: 77,
+            percent: 85,
             foregroundColor: '#3498DB',
             backgroundColor: '#eee',
             foregroundBorderWidth: 5,
