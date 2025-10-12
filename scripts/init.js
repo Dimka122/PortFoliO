@@ -5,7 +5,7 @@ $(document).ready(function() {
         
         // Инициализация с настройками
         $('#test-circle1').circliful({
-            percent: 80,
+            percent: 82,
             foregroundColor: '#f8b410',
             backgroundColor: '#eee',
             foregroundBorderWidth: 5,
@@ -32,7 +32,7 @@ $(document).ready(function() {
         });
         
         $('#test-circle4').circliful({
-            percent: 101,
+            percent: 91,
             foregroundColor: '#f8b410',
             backgroundColor: '#eee',
             foregroundBorderWidth: 5,
@@ -41,7 +41,7 @@ $(document).ready(function() {
         });
         
         $('#test-circle5').circliful({
-            percent: 77,
+            percent: 79,
             foregroundColor: '#3498DB',
             backgroundColor: '#eee',
             foregroundBorderWidth: 5,
