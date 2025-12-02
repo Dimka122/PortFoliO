@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/portfolio-carousel.css">
 <link rel="stylesheet" href="css/jquery.circliful.css">
     
     <!--chart-->
@@ -146,6 +147,9 @@
                                 <h2>Профессиональные навыки</h2>
                                 <hr>
                             </div>
+
+                            <details>
+
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                                     <h4>HTML5|CSS3</h4>
                                     <div id="test-circle1" class="svg-container"></div>
@@ -178,69 +182,168 @@
                                     <h4>React</h4>
                                     <div id="test-circle8" class="svg-container"></div>
                         </div>
+                        </details>
                 </div>
             </div>
         </section>
         <!-- ПОРТФОЛИО-->
-        <section id="portfolio" class="_mPS2id-t">
-            <div class="container">
-                <div class="row">
-                    <div class="article-potf text-center">
-                        <div class="top-text-pt wow fadeInUp" data-wow-offset="150" style="visibility: hidden; animation-name: none;">
-                            <h2>Портфолио</h2>
-                            <hr>
-                        </div>
-                        <div class="top-menu-pt">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="top-menu filter_div controls">
-                                    <ul class="inline">
-                                        <li class="wow bounceInLeft filter active" type="button" data-filter=".all" style="visibility: hidden; animation-name: none;">Все работы</li>
-                                        <li class="wow bounceInLeft filter" type="button" data-filter=".category-1" style="visibility: hidden; animation-name: none;">"под ключ"</li>
-                                        <li class="wow bounceInRight filter" type="button" data-filter=".category-2" style="visibility: hidden; animation-name: none;">Верстка</li>
-                                        <li class="wow bounceInRight filter" type="button" data-filter=".category-3" style="visibility: hidden; animation-name: none;">Прочее</li>
-                                    </ul>
+        <!-- ПОРТФОЛИО - 3D КАРУСЕЛЬ -->
+<section id="portfolio" class="_mPS2id-t">
+    <div class="container">
+        <div class="row">
+            <div class="article-potf text-center">
+                <div class="top-text-pt wow fadeInUp" data-wow-offset="150">
+                    <h2>Мои работы</h2>
+                    <p class="subtitle">Вращайте карусель для просмотра проектов</p>
+                    <hr>
+                </div>
+                
+                <!-- 3D Карусель -->
+                <div class="portfolio-carousel-container">
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn" id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="carousel-wrapper">
+                            <div class="portfolio-carousel" id="portfolioCarousel">
+                                <!-- Карточка 1 -->
+                                <div class="portfolio-card" data-category="category-2 category-3">
+                                    <div class="card-front">
+                                        <img src="images/steko.png" alt="Сайт-визитка" class="work">
+                                        <div class="card-overlay">
+                                            <h4>Сайт-визитка</h4>
+                                            <p>Сайт по продаже окон</p>
+                                            <span class="card-tag">Верстка</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <h4>Сайт-визитка</h4>
+                                        <p class="card-description">Полностью адаптивный сайт для компании по продаже окон. 
+                                            Реализована галерея работ, форма обратной связи, калькулятор стоимости.</p>
+                                        <div class="tech-stack">
+                                            <span>HTML5</span>
+                                            <span>CSS3</span>
+                                            <span>JavaScript</span>
+                                            <span>Bootstrap</span>
+                                        </div>
+                                        <button class="btn-more" data-toggle="modal" data-target="#modal-1">
+                                            <i class="fas fa-external-link-alt"></i> Демо
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Карточка 2 -->
+                                <div class="portfolio-card" data-category="category-2">
+                                    <div class="card-front">
+                                        <img src="images/Sorts1.png" alt="Фильтрация товаров" class="work">
+                                        <div class="card-overlay">
+                                            <h4>Фильтрация товаров</h4>
+                                            <p>React приложение</p>
+                                            <span class="card-tag">React</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <h4>Фильтрация и сортировка</h4>
+                                        <p class="card-description">Интерактивное приложение для фильтрации и сортировки товаров 
+                                            с использованием React Hooks и контекста.</p>
+                                        <div class="tech-stack">
+                                            <span>React</span>
+                                            <span>Hooks</span>
+                                            <span>Context API</span>
+                                            <span>SCSS</span>
+                                        </div>
+                                        <button class="btn-more" data-toggle="modal" data-target="#modal-2">
+                                            <i class="fas fa-external-link-alt"></i> Демо
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Карточка 3 -->
+                                <div class="portfolio-card" data-category="category-1 category-3">
+                                    <div class="card-front">
+                                        <img src="images/Shop.png" alt="Интернет магазин" class="work">
+                                        <div class="card-overlay">
+                                            <h4>Internet Shop</h4>
+                                            <p>Full-stack проект</p>
+                                            <span class="card-tag">Full-Stack</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <h4>Интернет магазин</h4>
+                                        <p class="card-description">Полнофункциональный интернет-магазин с корзиной товаров, 
+                                            системой оплаты и административной панелью.</p>
+                                        <div class="tech-stack">
+                                            <span>ASP.NET</span>
+                                            <span>Entity Framework</span>
+                                            <span>SQL Server</span>
+                                            <span>JavaScript</span>
+                                        </div>
+                                        <button class="btn-more" data-toggle="modal" data-target="#modal-3">
+                                            <i class="fas fa-external-link-alt"></i> Демо
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Карточка 4 -->
+                                <div class="portfolio-card" data-category="category-2">
+                                    <div class="card-front">
+                                        <img src="images/indexxx.png" alt="Сайт пекарни" class="work">
+                                        <div class="card-overlay">
+                                            <h4>Сайт пекарни</h4>
+                                            <p>Современный дизайн</p>
+                                            <span class="card-tag">Дизайн</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <h4>Современная пекарня</h4>
+                                        <p class="card-description">Креативный сайт для пекарни с анимациями, 
+                                            параллакс-эффектами и онлайн-заказом продукции.</p>
+                                        <div class="tech-stack">
+                                            <span>HTML5</span>
+                                            <span>CSS3</span>
+                                            <span>GSAP</span>
+                                            <span>jQuery</span>
+                                        </div>
+                                        <button class="btn-more" data-toggle="modal" data-target="#modal-4">
+                                            <i class="fas fa-external-link-alt"></i> Демо
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="Container" class="content-potfol container">
-                            <div class="mix all category-2  category-3 col-lg-3 col-md-3 col-sm-3 col-xs-6 work-cont">
-                                <img src="images/steko.png" alt="Пример" class="work">
-                                <div class="port-item-cont">
-                                    <h4>Сайт-визитка</h4>
-                                    <p>Сайт-визитка по продаже окон</p>
-                                    <button type="button" class="btn-more" data-toggle="modal" data-target="#modal-1">Подробнее</button>
-                                </div>
-                            </div>
-                            <div class="mix all category-2 col-lg-3 col-md-3 col-sm-3 col-xs-6 work-cont">
-                                <img src="images/Sorts1.png" alt="Пример" class="work">
-                                <div class="port-item-cont">
-                                    <h4><br>фильтрация и сортировка товара на React</h4>
-                                    <p></p>
-                                    <button type="button" class="btn-more" data-toggle="modal" data-target="#modal-2">Подробнее</button>
-                                </div>
-                            </div>
-                            <div class="mix all category-1 category-3 category-2 col-lg-3 col-md-3 col-sm-3 col-xs-6 work-cont">
-                                <img src="images/Shop.png" alt="Пример" class="work">
-                                <div class="port-item-cont">
-                                    <h4><br>Internet Shop</h4>
-                                    <p>Краткое описание</p>
-                                    <button type="button" class="btn-more" data-toggle="modal" data-target="#modal-3">Подробнее</button>
-                                </div>
-                            </div>
-
-                            <div class="mix all category-2 col-lg-3 col-md-3 col-sm-3 col-xs-6 work-cont">
-                                <img src="images/indexxx.png" alt="Пример" class="work">
-                                <div class="port-item-cont">
-                                    <h4><br>Сайт современной пекарни</h4>
-                                    <p>Краткое описание</p>
-                                    <button type="button" class="btn-more" data-toggle="modal" data-target="#modal-4">Подробнее</button>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        <button class="carousel-btn next-btn" id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Индикаторы -->
+                    <div class="carousel-indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                        <span class="indicator" data-index="3"></span>
+                    </div>
+                    
+                    <!-- Фильтры -->
+                    <div class="carousel-filters">
+                        <button class="filter-btn active" data-filter="all">Все работы</button>
+                        <button class="filter-btn" data-filter="category-1">"под ключ"</button>
+                        <button class="filter-btn" data-filter="category-2">Верстка</button>
+                        <button class="filter-btn" data-filter="category-3">Прочее</button>
                     </div>
                 </div>
+                
+                <!-- Инструкция -->
+                <div class="carousel-instruction">
+                    <p><i class="fas fa-mouse-pointer"></i> Наведите на карточку для 3D-эффекта</p>
+                    <p><i class="fas fa-arrows-alt-h"></i> Используйте кнопки или перетаскивайте для вращения</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
         <!--КОНТАКТЫ-->
         <section id="contacts" class="_mPS2id-t">
             <div class="container">
@@ -425,6 +528,7 @@
 <script src="scripts/jquery.circliful.min.js"></script>
 <script src="scripts/jquery.malihu.PageScroll2id.min.js"></script>
 <script src="scripts/init.js"></script>
+<script src="scripts/portfolio-carousel.js"></script>
 
 
 </body></html>
