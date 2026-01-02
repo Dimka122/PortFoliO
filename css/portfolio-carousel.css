@@ -48,7 +48,7 @@
 }
 
 .card-front {
-    background: white;
+    background: rgb(16, 14, 14);
     transform-style: preserve-3d;
 }
 
